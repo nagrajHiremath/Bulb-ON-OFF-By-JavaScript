@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Lec 2</title>
+    <style>
+        body{
+            background-color: #e0e0e0;
+        }
+        .imageC{
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+        }
+        #image{
+            height: 300px;
+        }
+        #btn{
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+        #but{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: greenyellow;
+        }
+        #text{
+            font-size: 15px;
+            font-weight: 500;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #but:hover{
+            cursor: pointer;
+            background-color: rgb(142, 187, 52);
+        }
+    </style>
+</head>
+<body id="bd">
+    <div class="imageC">
+        <img id="image" src="https://www.w3schools.com/js/pic_bulboff.gif"  alt="">
+    </div>
+
+    <div id="btn">
+        <button id="but"  onclick="call()"> <span id="text">ON</span> </button >
+    </div>
+    
+    <!-- <button onclick="on()"> ON </button> -->
+    <script>
+        var x = false
+        function call(){
+            if(x){
+                 x = false
+            document.getElementById('image').src = 'https://www.w3schools.com/js/pic_bulboff.gif'
+            document.getElementById('text').textContent = 'ON'
+            document.getElementById('bd').style.backgroundColor = '#e0e0e0'
+            }
+            else{
+                 x = true
+            document.getElementById('image').src = 'https://www.w3schools.com/js/pic_bulbon.gif'
+            document.getElementById('text').textContent = 'OFF'
+            document.getElementById('bd').style.backgroundColor = '#fbffd9'
+            }
+        }
+        // function on(){
+        //     var x = true
+        //     document.getElementById('image').src = 'https://www.w3schools.com/js/pic_bulbon.gif'
+        //     document.getElementById('btn').innerText = 'OFF'
+        // }
+        // function off(){
+        //     var x = false
+        //     document.getElementById('image').src = 'https://www.w3schools.com/js/pic_bulboff.gif'
+        //     document.getElementById('btn').innerText = 'ON'
+        // }
+    </script>
+</body>
+</html>
